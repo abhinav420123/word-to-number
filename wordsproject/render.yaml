@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: word-to-number
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn wordsproject.wsgi:application
-    envVars:
-      - key: DJANGO_SETTINGS_MODULE
-        value: wordsproject.settings

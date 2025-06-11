@@ -37,7 +37,7 @@ def index(request):
             # Format using Indian format for crore/lakh style:
             if 'lakh' in text.lower() or 'crore' in text.lower():
                 import locale
-                locale.setlocale(locale.LC_ALL, 'en_IN.UTF-8')
+                locale.setlocale(locale.LC_ALL, 'C')
                 result = locale.format_string("%d", number, grouping=True)
             else:
                 # Use western format (e.g., million/billion)
